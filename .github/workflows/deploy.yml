@@ -20,3 +20,5 @@ jobs:
         with:
           branch: gh-pages
           folder: build
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
