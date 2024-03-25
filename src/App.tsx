@@ -8,7 +8,7 @@ import Header from './pages/Header'
 import Footer from './pages/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import Project from './pages/Project'
+// import Project from './pages/Project'
 import Contact from './pages/Contact'
 
 const LoadingContainer = styled.div`
@@ -41,7 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/project" element={<Project />} />
+            {/* <Route path="/project" element={<Project />} /> */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
