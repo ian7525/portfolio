@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import TypeWriter from '../utils/typeWriter'
+
 import AvatarImages from '../imgs/avatar.png'
 
 const Container = styled.div`
@@ -49,6 +51,7 @@ const Home = () => {
       <GreetingContainer>
         <h2>Hi There!</h2>
         <p>I'm Ian</p>
+        <TypeWriter strings={['Software Engineer', 'Full Stack Developer']} />
         <ResumeContainer>
           My Resume:{' '}
           <a href={engResume} target="_blank" rel="noopener noreferrer">
