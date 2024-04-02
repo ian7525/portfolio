@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 
 import './App.css'
 
@@ -22,7 +23,7 @@ const LoadingContainer = styled.div`
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
-
+  const { t } = useTranslation()
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
@@ -44,6 +45,7 @@ function App() {
             {/* <Route path="/project" element={<Project />} /> */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
+
           <Footer />
         </>
       )}

@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import TypeWriter from '../utils/typeWriter'
+import { useTranslation } from 'react-i18next'
 
+import TypeWriter from '../utils/typeWriter'
 import AvatarImages from '../imgs/avatar.png'
 
 const Container = styled.div`
@@ -46,14 +47,18 @@ const Home = () => {
   const chtResume =
     'https://drive.google.com/file/d/1mkTWVtwl4Fc6_RZEteQQbdUoxxiC3u3o/view?usp=drive_link'
 
+  const { t } = useTranslation()
+
   return (
     <Container>
       <GreetingContainer>
-        <h2>Hi There!</h2>
-        <p>I'm Ian</p>
-        <TypeWriter strings={['Software Engineer', 'Full Stack Developer']} />
+        <h2>{t('greeting')}</h2>
+        <p>{t('myName')}</p>
+        <TypeWriter
+          strings={[t('softwareEngineer'), t('fullStackDeveloper')]}
+        />
         <ResumeContainer>
-          My Resume:{' '}
+          {t('myResume')}
           <a href={engResume} target="_blank" rel="noopener noreferrer">
             ENG.
           </a>{' '}
