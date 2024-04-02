@@ -14,7 +14,7 @@ i18n
     // default language
     fallbackLng: 'zh',
     backend: {
-      loadPath: 'portfolio/locales/{{lng}}/translation.json',
+      loadPath: '/portfolio/locales/{{lng}}/translation.json',
     },
     interpolation: {
       // no need for xss protection because React already provides it
